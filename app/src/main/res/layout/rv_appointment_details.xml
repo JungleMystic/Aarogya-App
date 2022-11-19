@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".fragments.DoctorDetailsFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/doctor_card_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardBackgroundColor="@color/cardBackground">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/apt_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/appointment_details"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/apt_id_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/appointment_id"
+                android:textColor="@color/blackNwhite"
+                android:textSize="16sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/apt_details"/>
+
+            <TextView
+                android:id="@+id/apt_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/sample_patient_name"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toEndOf="@id/apt_id_heading"
+                app:layout_constraintTop_toBottomOf="@id/apt_details"/>
+
+
+            <TextView
+                android:id="@+id/patient_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/patient_details"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/apt_id"/>
+
+            <TextView
+                android:id="@+id/patient_name_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/patient_name"
+                android:textColor="@color/blackNwhite"
+                android:textSize="16sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/patient_details"/>
+
+            <TextView
+                android:id="@+id/apt_patient_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/sample_patient_name"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toEndOf="@id/patient_name_heading"
+                app:layout_constraintTop_toBottomOf="@id/patient_details"/>
+
+            <TextView
+                android:id="@+id/patient_age_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/age"
+                android:textColor="@color/blackNwhite"
+                android:textSize="16sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/patient_name_heading"/>
+
+            <TextView
+                android:id="@+id/apt_patient_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/sample_patient_age"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toEndOf="@id/patient_age_heading"
+                app:layout_constraintTop_toBottomOf="@id/apt_patient_name"/>
+
+            <TextView
+                android:id="@+id/patient_gender_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/gender"
+                android:textColor="@color/blackNwhite"
+                android:textSize="16sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/patient_age_heading"/>
+
+            <TextView
+                android:id="@+id/apt_patient_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/sample_patient_gender"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toEndOf="@id/patient_age_heading"
+                app:layout_constraintTop_toBottomOf="@id/apt_patient_age"/>
+
+            <TextView
+                android:id="@+id/patient_appointment_date_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/appointment_date"
+                android:textColor="@color/blackNwhite"
+                android:textSize="16sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/patient_gender_heading"/>
+
+            <TextView
+                android:id="@+id/apt_appointment_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/sample_apt_date"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toEndOf="@id/patient_gender_heading"
+                app:layout_constraintTop_toBottomOf="@id/apt_patient_gender"/>
+
+            <TextView
+                android:id="@+id/patient_appointment_time_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/appointment_time"
+                android:textColor="@color/blackNwhite"
+                android:textSize="16sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/patient_appointment_date_heading"/>
+
+            <TextView
+                android:id="@+id/apt_appointment_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/sample_apt_time"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toEndOf="@id/patient_appointment_date_heading"
+                app:layout_constraintTop_toBottomOf="@id/apt_appointment_date"/>
+
+            <TextView
+                android:id="@+id/patient_problem_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/patient_problem"
+                android:textColor="@color/blackNwhite"
+                android:textSize="16sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/patient_appointment_time_heading"/>
+
+            <TextView
+                android:id="@+id/apt_patient_problem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/sample_patient_problem"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toEndOf="@id/patient_appointment_time_heading"
+                app:layout_constraintTop_toBottomOf="@id/apt_appointment_time"/>
+
+            <TextView
+                android:id="@+id/doctor_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/doctor_details"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/apt_patient_problem"/>
+
+            <TextView
+                android:id="@+id/doctor_name_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/doctor_name"
+                android:textColor="@color/blackNwhite"
+                android:textSize="16sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/doctor_details"/>
+
+            <TextView
+                android:id="@+id/apt_doctor_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/sample_doctor_name"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toEndOf="@id/doctor_name_heading"
+                app:layout_constraintTop_toBottomOf="@id/doctor_details"/>
+
+            <TextView
+                android:id="@+id/doctor_specialization_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/specialization"
+                android:textColor="@color/blackNwhite"
+                android:textSize="16sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/doctor_name_heading"/>
+
+            <TextView
+                android:id="@+id/apt_doctor_specialization"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/sample_doctor_specialization"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toEndOf="@id/doctor_specialization_heading"
+                app:layout_constraintTop_toBottomOf="@id/apt_doctor_name"/>
+
+
+            <TextView
+                android:id="@+id/hospital_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/hospital_details"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/apt_doctor_specialization"/>
+
+            <TextView
+                android:id="@+id/hospital_name_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="@string/hospital_name"
+                android:textColor="@color/blackNwhite"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hospital_details"/>
+
+            <TextView
+                android:id="@+id/apt_hospital_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="160dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="@string/sample_hospital_name"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/hospital_name_heading"
+                app:layout_constraintTop_toBottomOf="@id/hospital_details"
+                tools:layout_editor_absoluteX="89dp" />
+
+            <TextView
+                android:id="@+id/hospital_address_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="@string/address"
+                android:textColor="@color/blackNwhite"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hospital_name_heading"
+                tools:layout_editor_absoluteX="90dp" />
+
+            <TextView
+                android:id="@+id/apt_hospital_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/sample_hospital_address"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:fontFamily="@font/comic_neue_bold"
+                app:layout_constraintStart_toEndOf="@id/hospital_address_heading"
+                app:layout_constraintTop_toBottomOf="@id/apt_hospital_name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="20dp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1094400303655",
+    "project_id": "aarogya-app-4a887",
+    "storage_bucket": "aarogya-app-4a887.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094400303655:android:ce5c08e89f3b7275e62402",
+        "android_client_info": {
+          "package_name": "com.lrm.aarogya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1094400303655-memidj8rj1aoqikh2q1cqgarhj0vmeq7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lrm.aarogya",
+            "certificate_hash": "0c7794188e29267b41d361696906a9a2a4e7f0a9"
+          }
+        },
+        {
+          "client_id": "1094400303655-khc97ec43gk88o2jl036mr5v7dso227h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBXcF2FvNdNi9GsJeNV0DRYI3Ja2EDXiw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1094400303655-khc97ec43gk88o2jl036mr5v7dso227h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
