@@ -16,10 +16,8 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
 import com.lrm.aarogya.R
 import com.lrm.aarogya.adapters.AppointmentAdapter
-import com.lrm.aarogya.adapters.DoctorsAdapter
 import com.lrm.aarogya.databinding.FragmentAppointmentDetailsBinding
 import com.lrm.aarogya.model.AppointmentData
-import com.lrm.aarogya.model.Doctor
 import com.lrm.aarogya.model.UserDetails
 
 class AppointmentDetailsFragment : Fragment() {

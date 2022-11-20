@@ -6,11 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.lrm.aarogya.R
 import com.lrm.aarogya.model.AppointmentData
-import com.lrm.aarogya.model.Doctor
-import de.hdodenhof.circleimageview.CircleImageView
 
 class AppointmentAdapter(
     val context: Context, val appointmentList: ArrayList<AppointmentData>

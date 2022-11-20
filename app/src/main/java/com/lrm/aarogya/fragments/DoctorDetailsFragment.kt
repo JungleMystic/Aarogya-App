@@ -9,7 +9,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.google.firebase.database.*
-import com.google.firebase.database.ktx.getValue
 import com.lrm.aarogya.R
 import com.lrm.aarogya.databinding.FragmentDoctorDetailsBinding
 import com.lrm.aarogya.model.Doctor
