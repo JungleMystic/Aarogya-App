@@ -88,7 +88,7 @@ class DoctorDetailsFragment : Fragment() {
                 if (doctorData.doctorPic == "") {
                     binding.doctorPicInDetails.setImageResource(R.drawable.doctor_icon2)
                 } else {
-                    Glide.with(requireContext()).load(doctorData.doctorPic).placeholder(R.drawable.doctor_icon2).into(binding.doctorPicInDetails)
+                    Glide.with(context!!).load(doctorData.doctorPic).placeholder(R.drawable.doctor_icon2).into(binding.doctorPicInDetails)
                 }
             }
 
