@@ -6,6 +6,10 @@
         android:title="@string/your_appointments"/>
 
     <item
+        android:id="@+id/your_profile"
+        android:title="@string/your_profile"/>
+
+    <item
         android:id="@+id/settings"
         android:title="@string/settings"/>
 

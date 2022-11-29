@@ -31,7 +31,7 @@ class AddHospitalFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentAddHospitalBinding.inflate(inflater, container, false)
 
@@ -65,7 +65,7 @@ class AddHospitalFragment : Fragment() {
         storageRef.putFile(imageUri)
             .addOnCompleteListener {
                 storageRef.downloadUrl.addOnSuccessListener {
-                    storeData(it, hospitalId!!)
+                    storeData(it, hospitalId)
                 }
             }
     }

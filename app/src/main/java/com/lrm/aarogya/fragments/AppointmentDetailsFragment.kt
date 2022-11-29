@@ -27,7 +27,6 @@ class AppointmentDetailsFragment : Fragment() {
     private lateinit var appointmentList: ArrayList<AppointmentData>
     private lateinit var adapter: AppointmentAdapter
     private lateinit var databaseRef: DatabaseReference
-    private lateinit var databaseRef2: DatabaseReference
     private lateinit var user: FirebaseUser
 
     override fun onCreateView(
@@ -36,16 +35,6 @@ class AppointmentDetailsFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentAppointmentDetailsBinding.inflate(inflater, container, false)
-
-        binding.toolbar.inflateMenu(R.menu.menu)
-        binding.toolbar.setOnMenuItemClickListener {
-
-            if (it.itemId == R.id.settings) {
-                val action = AppointmentDetailsFragmentDirections.actionAppointmentDetailsFragmentToSettingsFragment()
-                this.findNavController().navigate(action)
-            }
-            true
-        }
 
         return binding.root
     }
@@ -64,32 +53,16 @@ class AppointmentDetailsFragment : Fragment() {
 
         adapter.setOnItemClickListener(object: AppointmentAdapter.onItemClickListener {
             override fun onItemClick(position: Int) {
-                val appointments = appointmentList[position]
-                val appointmentId = appointments.appointmentId
+                //val appointments = appointmentList[position]
+                //val appointmentId = appointments.appointmentId
             }
 
         })
 
-        databaseRef2 = FirebaseDatabase.getInstance().getReference("users").child(user.uid)
-
-        databaseRef2.addValueEventListener(object: ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                val currentUser = snapshot.getValue(UserDetails::class.java)
-
-                if (currentUser!!.profilePic == "") {
-                    binding.mainMyProfilePic.setImageResource(R.drawable.profile_icon)
-                } else {
-                    Glide.with(this@AppointmentDetailsFragment).load(currentUser.profilePic)
-                        .into(binding.mainMyProfilePic)
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(context, error.message, Toast.LENGTH_SHORT).show()
-            }
-
-        })
-
+        binding.backButton.setOnClickListener {
+            val action = AppointmentDetailsFragmentDirections.actionAppointmentDetailsFragmentToSelectStateFragment()
+            this.findNavController().navigate(action)
+        }
 
         databaseRef = FirebaseDatabase.getInstance().getReference("appointment_data").child(user.uid)
 
@@ -111,15 +84,5 @@ class AppointmentDetailsFragment : Fragment() {
             }
 
         })
-
-        binding.mainMyProfilePic.setOnClickListener {
-            val action = AppointmentDetailsFragmentDirections.actionAppointmentDetailsFragmentToYourProfileFragment()
-            this.findNavController().navigate(action)
-        }
-
-        binding.searchHospitalsFAB.setOnClickListener {
-            val action = AppointmentDetailsFragmentDirections.actionAppointmentDetailsFragmentToFindHospitalFragment()
-            this.findNavController().navigate(action)
-        }
     }
 }

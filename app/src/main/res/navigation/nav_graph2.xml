@@ -11,8 +11,8 @@
         android:label="fragment_splash_screen"
         tools:layout="@layout/fragment_splash_screen" >
         <action
-            android:id="@+id/action_splashScreenFragment_to_appointmentDetailsFragment"
-            app:destination="@id/appointmentDetailsFragment"
+            android:id="@+id/action_splashScreenFragment_to_selectStateFragment"
+            app:destination="@id/selectStateFragment"
             app:popUpTo="@id/splashScreenFragment"
             app:popUpToInclusive="true" />
     </fragment>
@@ -22,14 +22,10 @@
         android:label="fragment_appointment_details"
         tools:layout="@layout/fragment_appointment_details" >
         <action
-            android:id="@+id/action_appointmentDetailsFragment_to_findHospitalFragment"
-            app:destination="@id/findHospitalFragment" />
-        <action
-            android:id="@+id/action_appointmentDetailsFragment_to_yourProfileFragment"
-            app:destination="@id/yourProfileFragment" />
-        <action
-            android:id="@+id/action_appointmentDetailsFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
+            android:id="@+id/action_appointmentDetailsFragment_to_selectStateFragment"
+            app:destination="@id/selectStateFragment"
+            app:popUpTo="@id/selectStateFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/findHospitalFragment"
@@ -40,13 +36,11 @@
             android:id="@+id/action_findHospitalFragment_to_findDoctorFragment"
             app:destination="@id/findDoctorFragment" />
         <action
-            android:id="@+id/action_findHospitalFragment_to_appointmentDetailsFragment"
-            app:destination="@id/appointmentDetailsFragment"
-            app:popUpTo="@id/appointmentDetailsFragment"
-            app:popUpToInclusive="true" />
-        <action
             android:id="@+id/action_findHospitalFragment_to_addHospitalFragment"
             app:destination="@id/addHospitalFragment" />
+        <action
+            android:id="@+id/action_findHospitalFragment_to_selectStateFragment"
+            app:destination="@id/selectStateFragment" />
     </fragment>
     <fragment
         android:id="@+id/findDoctorFragment"
@@ -94,9 +88,9 @@
         android:label="fragment_your_profile"
         tools:layout="@layout/fragment_your_profile" >
         <action
-            android:id="@+id/action_yourProfileFragment_to_appointmentDetailsFragment"
-            app:destination="@id/appointmentDetailsFragment"
-            app:popUpTo="@id/appointmentDetailsFragment"
+            android:id="@+id/action_yourProfileFragment_to_selectStateFragment"
+            app:destination="@id/selectStateFragment"
+            app:popUpTo="@id/selectStateFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
@@ -124,8 +118,8 @@
         <action
             android:id="@+id/action_patientProblemFragment_to_appointmentDetailsFragment"
             app:destination="@id/appointmentDetailsFragment"
-            app:popUpTo="@id/appointmentDetailsFragment"
-            app:popUpToInclusive="true" />
+            app:popUpTo="@id/selectStateFragment"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
@@ -133,9 +127,9 @@
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" >
         <action
-            android:id="@+id/action_settingsFragment_to_appointmentDetailsFragment"
-            app:destination="@id/appointmentDetailsFragment"
-            app:popUpTo="@id/appointmentDetailsFragment"
+            android:id="@+id/action_settingsFragment_to_selectStateFragment"
+            app:destination="@id/selectStateFragment"
+            app:popUpTo="@id/selectStateFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
@@ -161,5 +155,23 @@
             app:popUpToInclusive="true" />
         <argument android:name="hospitalId"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectStateFragment"
+        android:name="com.lrm.aarogya.fragments.SelectStateFragment"
+        android:label="fragment_select_state"
+        tools:layout="@layout/fragment_select_state" >
+        <action
+            android:id="@+id/action_selectStateFragment_to_findHospitalFragment"
+            app:destination="@id/findHospitalFragment" />
+        <action
+            android:id="@+id/action_selectStateFragment_to_yourProfileFragment"
+            app:destination="@id/yourProfileFragment" />
+        <action
+            android:id="@+id/action_selectStateFragment_to_appointmentDetailsFragment"
+            app:destination="@id/appointmentDetailsFragment" />
+        <action
+            android:id="@+id/action_selectStateFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
 </navigation>

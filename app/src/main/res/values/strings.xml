@@ -80,5 +80,8 @@ Time: 9:00 AM to 6:00 PM</string>
     <string name="my_profile">My Profile</string>
     <string name="save">Save</string>
     <string name="your_appointments">Your Appointments</string>
+    <string name="select_state_heading">Select your state to find hospital</string>
+    <string name="sample_state_name">Andhra Pradesh</string>
+    <string name="your_profile">Your Profile</string>
 
 </resources>

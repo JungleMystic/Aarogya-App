@@ -13,6 +13,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.lrm.aarogya.R
 import com.lrm.aarogya.databinding.FragmentPatientProblemBinding
 
 class PatientProblemFragment : Fragment() {
@@ -22,7 +23,7 @@ class PatientProblemFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentPatientProblemBinding.inflate(inflater, container, false)
 
@@ -31,6 +32,10 @@ class PatientProblemFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.backButton.setOnClickListener {
+            this.findNavController().navigate(R.id.action_patientProblemFragment_to_doctorDetailsFragment)
+        }
 
         val navArgs: PatientProblemFragmentArgs by navArgs()
         val hospitalName: String = navArgs.hospitalName

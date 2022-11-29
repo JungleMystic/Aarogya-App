@@ -37,7 +37,7 @@ class SettingsFragment : Fragment() {
         auth = Firebase.auth
 
         binding.backButton.setOnClickListener {
-            val action = SettingsFragmentDirections.actionSettingsFragmentToAppointmentDetailsFragment()
+            val action = SettingsFragmentDirections.actionSettingsFragmentToSelectStateFragment()
             this.findNavController().navigate(action)
         }
 

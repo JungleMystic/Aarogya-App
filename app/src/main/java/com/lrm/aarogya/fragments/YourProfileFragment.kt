@@ -76,7 +76,7 @@ class YourProfileFragment : Fragment() {
         })
 
         binding.backButton.setOnClickListener {
-            val action = YourProfileFragmentDirections.actionYourProfileFragmentToAppointmentDetailsFragment()
+            val action = YourProfileFragmentDirections.actionYourProfileFragmentToSelectStateFragment()
             this.findNavController().navigate(action)
         }
 

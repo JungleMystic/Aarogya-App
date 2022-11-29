@@ -30,7 +30,7 @@ class FindDoctorFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentFindDoctorBinding.inflate(inflater, container, false)
 
@@ -52,6 +52,11 @@ class FindDoctorFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.backButton.setOnClickListener {
+            val action = FindDoctorFragmentDirections.actionFindDoctorFragmentToFindHospitalFragment()
+            this.findNavController().navigate(action)
+        }
 
         var doctorId: String = ""
 

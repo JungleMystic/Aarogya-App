@@ -22,7 +22,7 @@ class SplashScreenFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_splash_screen, container, false)
 
         Handler(Looper.myLooper()!!).postDelayed({
-            findNavController().navigate(R.id.action_splashScreenFragment_to_appointmentDetailsFragment)
+            findNavController().navigate(R.id.action_splashScreenFragment_to_selectStateFragment)
         }, 2000)
 
         return view

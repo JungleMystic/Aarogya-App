@@ -17,8 +17,6 @@ import com.lrm.aarogya.model.Hospital
 class DoctorDetailsFragment : Fragment() {
 
     private lateinit var binding: FragmentDoctorDetailsBinding
-    private lateinit var hospitalName: String
-    private lateinit var doctorName: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,6 +30,10 @@ class DoctorDetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.backButton.setOnClickListener {
+            this.findNavController().navigate(R.id.action_doctorDetailsFragment_to_findDoctorFragment)
+        }
 
         var hospitalName: String = ""
         var doctorName: String = ""
