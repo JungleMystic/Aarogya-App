@@ -79,5 +79,6 @@ Time: 9:00 AM to 6:00 PM</string>
     <string name="appointment_id">Appointment Id</string>
     <string name="my_profile">My Profile</string>
     <string name="save">Save</string>
+    <string name="your_appointments">Your Appointments</string>
 
 </resources>
